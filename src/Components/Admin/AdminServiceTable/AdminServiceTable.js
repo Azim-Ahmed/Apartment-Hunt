@@ -7,7 +7,7 @@ const AdminServiceTable = ({ singleOrder }) => {
   // console.log(pending);
 
   const [status, setStatus] = useState(singleOrder.status.toLowerCase());
-  console.log(status);
+
   const onChangeStatusHandler = (e) => {
     setStatus(e.target.value.toLowerCase());
     fetch("https://aqueous-mountain-26751.herokuapp.com/update-status", {

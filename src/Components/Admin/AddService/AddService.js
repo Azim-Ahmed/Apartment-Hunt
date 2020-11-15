@@ -37,8 +37,6 @@ const AddService = () => {
       .catch((err) => console.log(err));
   };
 
-  console.log(info, file);
-
   return (
     <div className="addService  container-fluid pr-0 ">
       <div className="addService row pt-4">

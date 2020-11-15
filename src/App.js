@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 import "./App.css";
 import Home from "./Components/Home/Home/Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import ClientPage from "./Components/ClientPage/ClientPage";
+
 import Contact from "./Components/ContactPage/Contact";
 import Event from "./Components/EventPage/Event";
 import Concerns from "./Components/ConcernsPage/Concerns";
@@ -47,10 +47,6 @@ function App() {
 
           <Route exact path="/contact">
             <Contact></Contact>
-          </Route>
-
-          <Route exact path="/profile">
-            <ClientPage></ClientPage>
           </Route>
 
           <Route path="/admin">
