@@ -1,0 +1,10 @@
+.footer-area{
+    background:#275A53;
+    background-size: cover;
+    color: white;
+    
+}
+
+.footer-area li{
+    padding-bottom: 10px;
+}
