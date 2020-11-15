@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       react router
-      <p>sufian</p>
+      <p>ok</p>
     </div>
   );
 }
