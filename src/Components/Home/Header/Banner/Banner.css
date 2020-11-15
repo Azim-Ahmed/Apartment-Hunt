@@ -1,0 +1,32 @@
+.parallax {
+    /* The image used */
+    /* background-image: url("../../../../Assets/images/Rectangle\ 13.png"); */
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../../../Assets/images/Rectangle\ 13.png');
+  
+    /* Set a specific height */
+    height: 370px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .textHeader{
+    font-weight:600;
+    font-size:3.5rem;
+  }
+  .inputbox{
+    width: 40%;
+    height:3rem;
+    border-radius: 10px;
+    border: none;
+  }
+  .searchButton{
+    height: 3rem;
+    background:#275A53;
+    padding: 2px 25px;
+    border: none;
+    border-radius: 7px;
+
+    
+  }
