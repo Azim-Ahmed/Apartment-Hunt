@@ -4,14 +4,14 @@ import { NavLink } from "react-router-dom";
 import logo from "../../../Assets/logos/Logo.png";
 import serviceListIcon from "../../../Assets/icons/serviceList.png";
 import plusIcon from "../../../Assets/icons/plus 1.png";
-import personIcon from "../../../Assets/icons/person.png";
+import homeIcon from "../../../Assets/logos/house.png";
 
 const Sidebar = () => {
   return (
     <section className="sidebar">
       <NavLink to="/" className="logo ">
         {" "}
-        <img src={logo} alt="" />{" "}
+        <img style={{ width: "40%" }} src={logo} alt="" />{" "}
       </NavLink>
 
       <div className="sidebar-option">
@@ -19,7 +19,8 @@ const Sidebar = () => {
           {" "}
           <h6>
             {" "}
-            <img src={serviceListIcon} alt="" /> Services list{" "}
+            <img src={serviceListIcon} alt="" />
+            Booking List{" "}
           </h6>{" "}
         </NavLink>
         <NavLink
@@ -30,18 +31,14 @@ const Sidebar = () => {
           {" "}
           <h6>
             {" "}
-            <img src={plusIcon} alt="" /> Add Service{" "}
+            <img src={plusIcon} alt="" /> Add Rent House{" "}
           </h6>{" "}
         </NavLink>
-        <NavLink
-          to="makeAdmin"
-          activeClassName="active"
-          className="sidebar-link"
-        >
+        <NavLink to="myRent" activeClassName="active" className="sidebar-link">
           {" "}
           <h6>
             {" "}
-            <img src={personIcon} alt="" /> Make Admin{" "}
+            <img src={homeIcon} alt="" /> My Rent{" "}
           </h6>{" "}
         </NavLink>
       </div>

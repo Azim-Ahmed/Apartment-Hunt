@@ -1,13 +1,20 @@
-import React, { useState } from "react";
-import { useContext } from "react";
-import { useEffect } from "react";
-import { UserContext } from "../../App";
-import Sidebar from "../Shared/Sidebar/Sidebar";
-import "./Admin.css";
-import AdminServiceTable from "./AdminServiceTable/AdminServiceTable";
+import React, { useContext, useEffect, useState } from "react";
+import "./MyRent.css";
+import Sidebar from "../../Shared/Sidebar/Sidebar";
+import { useHistory } from "react-router-dom";
+import { UserContext } from "../../../App";
+import MyRentServiceTable from "./MyRentServiceTable";
 
-const Admin = () => {
+const MyRent = () => {
   const [loggedInUser] = useContext(UserContext);
+  const history = useHistory();
+  const [adminInfo, setAdminInfo] = useState({});
+
+  const handleChange = (e) => {
+    const newAdminInfo = { ...adminInfo };
+    newAdminInfo[e.target.name] = e.target.value;
+    setAdminInfo(newAdminInfo);
+  };
 
   const [allOrderList, setAllOrderList] = useState([]);
 
@@ -20,16 +27,16 @@ const Admin = () => {
   }, []);
 
   return (
-    <div className="container-fluid">
-      <div className="row pt-3">
+    <div className="addService  container-fluid pr-0 ">
+      <div className="addService row pt-4">
         <div className="col-md-3">
           <Sidebar />
         </div>
 
-        <div className=" col-sm-12 col-md-12 col-lg-9">
+        <div className="col-md-9">
           <div className="header-option d-flex justify-content-between  ml-5 ">
-            <h4 className=" text-brand "> Booking list </h4>
-            <div className="d-flex align-items-center mt-3 mr-5 ">
+            <h4 className=" text-brand "> My Rent </h4>
+            <div className="d-flex align-items-center mt-3 mr-5">
               <img
                 src={loggedInUser.picture}
                 style={{ width: "44px", height: "44px", marginTop: "" }}
@@ -49,17 +56,15 @@ const Admin = () => {
                 <thead>
                   <tr>
                     {/* <div className="table-header"> */}
-                    <th scope="col">Name</th>
-                    <th scope="col">Email ID</th>
-                    <th scope="col">Phone No</th>
-                    <th scope="col"> Massage </th>
-                    <th scope="col">Status</th>
+                    <th scope="col">House name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Action</th>
                     {/* </div> */}
                   </tr>
                 </thead>
 
                 {allOrderList.map((singleOrder) => (
-                  <AdminServiceTable
+                  <MyRentServiceTable
                     key={singleOrder._id}
                     singleOrder={singleOrder}
                   />
@@ -73,4 +78,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default MyRent;

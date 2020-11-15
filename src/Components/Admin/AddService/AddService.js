@@ -48,7 +48,7 @@ const AddService = () => {
 
         <div className="col-md-9">
           <div className="header-option d-flex justify-content-between  ml-5 ">
-            <h4 className=" text-brand "> Add Service </h4>
+            <h4 className=" text-brand "> Add Rent House </h4>
             <div className="d-flex align-items-center mt-3 mr-5">
               <img
                 src={loggedInUser.picture}
@@ -67,7 +67,7 @@ const AddService = () => {
             <form onSubmit={handleSubmit} className=" " action="">
               <div className="form">
                 <div className="formLeft">
-                  <h5>Event Title </h5>
+                  <h5>Service Title </h5>
                   <input
                     type="text"
                     name="title"
@@ -75,19 +75,42 @@ const AddService = () => {
                     id=""
                     onChange={handleChange}
                   />
-
-                  <h5> Description </h5>
-                  <textarea
-                    type="textArea"
-                    name="description"
-                    placeholder="Enter Description "
+                  <h5>Location</h5>
+                  <input
+                    type="text"
+                    name="Location"
+                    placeholder="Enter Location"
+                    id=""
+                    onChange={handleChange}
+                  />
+                  <h5>No of Bathroom</h5>
+                  <input
+                    type="number"
+                    name="bathroom"
+                    placeholder="number of bathroom"
                     id=""
                     onChange={handleChange}
                   />
                 </div>
 
                 <div className="formRight">
-                  <h5> Icon </h5>
+                  <h5>Price </h5>
+                  <input
+                    type="number"
+                    name="price"
+                    placeholder="Enter price"
+                    id=""
+                    onChange={handleChange}
+                  />
+                  <h5>No of Bedroom</h5>
+                  <input
+                    type="number"
+                    name="bedroom"
+                    placeholder="number of bedroom"
+                    id=""
+                    onChange={handleChange}
+                  />
+                  <h5> Thumbnail </h5>
                   <div className="uploadFile">
                     <input
                       type="file"

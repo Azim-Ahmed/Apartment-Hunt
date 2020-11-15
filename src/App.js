@@ -10,7 +10,8 @@ import Service from "./Components/ServicePage/Service";
 import About from "./Components/AboutPage/About";
 import AddService from "./Components/Admin/AddService/AddService";
 import Admin from "./Components/Admin/Admin";
-import MakeAdmin from "./Components/Admin/MakeAdmin/MakeAdmin";
+
+import MyRent from "./Components/Admin/MyRent/MyRent";
 
 export const UserContext = createContext();
 
@@ -60,8 +61,8 @@ function App() {
             <AddService />
           </Route>
 
-          <Route path="/makeAdmin">
-            <MakeAdmin />
+          <Route path="/myRent">
+            <MyRent />
           </Route>
 
           <Route path="*">
