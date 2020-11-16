@@ -6,6 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import HouseDetail from './Components/HouseDetails/HouseDetail';
 
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
         <Route path ="/home">
         <Home></Home>
         </Route>
-        <Route path ="/login">
-        <Home></Home>
+        <Route path ="/housedetails/:id">
+        <HouseDetail/>
         </Route>
         <Route to ="/home">
         <Home></Home>

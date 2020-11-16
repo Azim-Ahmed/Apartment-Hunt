@@ -1,10 +1,5 @@
 import React from 'react';
 import './Banner.css'
-import {
-   
-    Button
-    
-  } from 'reactstrap';
 
 const Banner = () => {
     return (

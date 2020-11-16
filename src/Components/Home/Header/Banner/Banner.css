@@ -1,7 +1,6 @@
 .parallax {
     /* The image used */
-    /* background-image: url("../../../../Assets/images/Rectangle\ 13.png"); */
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../../../Assets/images/Rectangle\ 13.png');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) ), url('../../../../Assets/images/Rectangle\ 13.png');
   
     /* Set a specific height */
     height: 370px;
