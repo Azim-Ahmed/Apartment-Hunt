@@ -19,7 +19,7 @@ const NavSection = () => {
 
   return (
     <Container>
-      <Navbar  className="text-dark navfont bg-warning" light expand="md">
+      <Navbar  className="text-dark navfont" light expand="md">
         <NavbarBrand href="/"> <img src={logo} width="30%" alt="Aparment hunt logo"/> </NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2 bg-info" />
         <Collapse isOpen={!collapsed} navbar>

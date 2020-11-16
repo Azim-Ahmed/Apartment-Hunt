@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 import React, { createContext, useState } from "react";
 import "./App.css";
 import Home from "./Components/Home/Home/Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+=======
+import React from 'react';
+import './App.css';
+import Home from './Components/Home/Home/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import HouseDetail from './Components/HouseDetails/HouseDetail';
+>>>>>>> origin/azim
 
 import Contact from "./Components/ContactPage/Contact";
 import Event from "./Components/EventPage/Event";
@@ -18,55 +30,31 @@ export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <Router>
-        <Switch>
-          <Route exact path="/home">
-            <Home></Home>
-          </Route>
-
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-
-          <Route exact path="/about">
-            <About></About>
-          </Route>
-
-          <Route exact path="/service">
-            <Service></Service>
-          </Route>
-
-          <Route exact path="/concerns">
-            <Concerns></Concerns>
-          </Route>
-
-          <Route exact path="/event">
-            <Event></Event>
-          </Route>
-
-          <Route exact path="/contact">
-            <Contact></Contact>
-          </Route>
-
-          <Route path="/admin">
-            <Admin />
-          </Route>
-
-          <Route path="/addService">
-            <AddService />
-          </Route>
-
-          <Route path="/myRent">
-            <MyRent />
-          </Route>
-
-          <Route path="*">
-            <h1>Page not found</h1>
-          </Route>
-        </Switch>
-      </Router>
-    </UserContext.Provider>
+    <Router>
+      <Switch>
+        <Route path ="/home">
+        <Home></Home>
+        </Route>
+        <Route path ="/housedetails/:id">
+        <HouseDetail/>
+        </Route>
+        <Route to ="/home">
+        <Home></Home>
+        </Route>
+        <Route to ="/home">
+        <Home></Home>
+        </Route>
+        <Route to ="/home">
+        <Home></Home>
+        </Route>
+        <Route to ="/home">
+        <Home></Home>
+        </Route>
+        <Route to ="/">
+        <Home></Home>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
