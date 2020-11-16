@@ -49,7 +49,7 @@ const AddService = () => {
             <h4 className=" text-brand "> Add Rent House </h4>
             <div className="d-flex align-items-center mt-3 mr-5">
               <img
-                src={loggedInUser.picture}
+                src={loggedInUser.photo}
                 style={{ width: "44px", height: "44px", marginTop: "" }}
                 className="card-img-top rounded-circle mr-2"
                 alt="..."

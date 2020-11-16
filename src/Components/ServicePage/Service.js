@@ -2,8 +2,8 @@ import React from "react";
 
 const Service = () => {
   return (
-    <div>
-      <h1>This is service Page </h1>
+    <div className="container">
+      <h1>Service page coming soon </h1>
     </div>
   );
 };

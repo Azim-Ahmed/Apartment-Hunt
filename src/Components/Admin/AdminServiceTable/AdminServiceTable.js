@@ -29,8 +29,8 @@ const AdminServiceTable = ({ singleOrder }) => {
       <tr>
         <td scope="row"> {singleOrder.name} </td>
         <td> {singleOrder.email} </td>
-        <td> {singleOrder.selectedServiceName} </td>
-        <td> {singleOrder.description.substring(0, 60)} </td>
+        <td> {singleOrder.phone} </td>
+        <td> {singleOrder.massage.substring(0, 60)} </td>
 
         {status === "pending" && (
           <Form.Control

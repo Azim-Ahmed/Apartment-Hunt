@@ -6,10 +6,7 @@ const MyRentServiceTable = ({ singleOrder }) => {
   // const [pending, setPending] = useState(singleOrder.status?.toLowerCase() === 'pending');
   // console.log(pending);
 
-  const [status, setStatus] = useState(singleOrder.status.toLowerCase());
-
   const onChangeStatusHandler = (e) => {
-    setStatus(e.target.value.toLowerCase());
     fetch("https://aqueous-mountain-26751.herokuapp.com/update-status", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -28,8 +25,10 @@ const MyRentServiceTable = ({ singleOrder }) => {
     <tbody>
       <tr>
         <td scope="row"> {singleOrder.name} </td>
-        <td> {singleOrder.email} </td>
-        <td> {singleOrder.selectedServiceName} </td>
+        <td> {singleOrder.price} </td>
+        <td>
+          <button class="btn btn-success">View Details</button>{" "}
+        </td>
       </tr>
     </tbody>
   );
