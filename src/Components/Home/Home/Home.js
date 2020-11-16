@@ -3,7 +3,10 @@ import Footer from '../../Footer/Footer';
 import Header from '../Header/Header';
 import HouseRent from '../HouseRent/HouseRent';
 import Service from '../Service/Service';
-
+import {
+    BrowserRouter as Router,
+   
+  } from "react-router-dom";
 const Home = () => {
     return (
         <>
