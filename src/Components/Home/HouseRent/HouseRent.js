@@ -4,6 +4,7 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle,Row, Col, Container
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 const HouseRent = () => {
@@ -14,9 +15,9 @@ const HouseRent = () => {
         <Container>
 
 
-<div className=" py-4 text-center text-info">
-<p>House Rent</p>
-        <h2>Discover The Latest Rent <br/> Available Today</h2>
+<div  className=" py-4 text-center text-info">
+<p style={{color: "#16322E"}}>House Rent</p>
+        <h2 style={{color: "#16322E"}}>Discover The Latest Rent <br/> Available Today</h2>
         
         
 </div>
@@ -25,11 +26,12 @@ const HouseRent = () => {
                 {
                     fakedata.map(item =>
                         <Col className="my-3" lg={4} sm={12} md={{ size: 4, order: 1 }}>
+                            <Link to={`/${item.id}`} style={{  textDecoration:"none"  }}>
                             <Card 
                                  style={{  borderRadius: "8px",  }}>
                                 <CardImg top width="100%" style={{ height: "260px" }} src={item.imgUrl} alt="Card image cap" />
                                 <CardBody>
-                                    <CardTitle><h5>{item.title}</h5></CardTitle>
+                                    <CardTitle><h5 style={{color: "#16322E"}}>{item.title}</h5></CardTitle>
                                     
                                     <CardText>
                                    <div>
@@ -55,6 +57,7 @@ const HouseRent = () => {
 
                                 </CardBody>
                             </Card>
+                            </Link>
                         </Col>
 
                     )

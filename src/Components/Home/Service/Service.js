@@ -30,8 +30,8 @@ const Service = () => {
     return (
         <Container className="mt-5 mb-4">
             <div className="text-center mb-5">
-                <p>service</p>
-                <h2>We are an agency tailored to all <br />
+                <p style={{color: "#16322E"}}>service</p>
+                <h2 style={{color: "#16322E"}}>We are an agency tailored to all <br />
             Clients' needs that always delivers
              </h2>
             </div>
