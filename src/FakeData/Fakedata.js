@@ -43,27 +43,27 @@ const rooms = [
         price: 221,
         id:4
     },
-    {
-        title: 'Epic Huda Palacio',
-        description: ' Have lots of in-room facilities and are designed in open-concept living area.',
-        imgUrl: 'https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/burj-al-arab-jumeirah/room/presidential-two-bedroom-suite/burj-al-arab-presidential-suite-guest-bedroom_6-4_landscape/burj-al-arab-presidential-suite-guest-bedroom_16-9_landscape.jpg?w=2080',
-        bed: 2,
-        capacity: 4,
-        bedType: 'Family',
-        avatar: 'F',
-        price: 255,
-        id:5
-    },
-    {
-        title: 'Washington Avenue',
-        description: ' Have lots of in-room facilities and are designed in open-concept living area.',
-        imgUrl: 'https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/burj-al-arab-jumeirah/room/presidential-two-bedroom-suite/burj-al-arab-presidential-suite-guest-bedroom_6-4_landscape/burj-al-arab-presidential-suite-guest-bedroom_16-9_landscape.jpg?w=2080',
-        bed: 2,
-        capacity: 4,
-        bedType: 'Family',
-        avatar: 'F',
-        price: 333,
-        id:6
-    }
+    // {
+    //     title: 'Epic Huda Palacio',
+    //     description: ' Have lots of in-room facilities and are designed in open-concept living area.',
+    //     imgUrl: 'https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/burj-al-arab-jumeirah/room/presidential-two-bedroom-suite/burj-al-arab-presidential-suite-guest-bedroom_6-4_landscape/burj-al-arab-presidential-suite-guest-bedroom_16-9_landscape.jpg?w=2080',
+    //     bed: 2,
+    //     capacity: 4,
+    //     bedType: 'Family',
+    //     avatar: 'F',
+    //     price: 255,
+    //     id:5
+    // },
+    // {
+    //     title: 'Washington Avenue',
+    //     description: ' Have lots of in-room facilities and are designed in open-concept living area.',
+    //     imgUrl: 'https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/burj-al-arab-jumeirah/room/presidential-two-bedroom-suite/burj-al-arab-presidential-suite-guest-bedroom_6-4_landscape/burj-al-arab-presidential-suite-guest-bedroom_16-9_landscape.jpg?w=2080',
+    //     bed: 2,
+    //     capacity: 4,
+    //     bedType: 'Family',
+    //     avatar: 'F',
+    //     price: 333,
+    //     id:6
+    // }
 ]
 export default rooms;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import fakedata from '../../../../src/FakeData/Fakedata'
 import {
     Card, CardImg, CardText, CardBody,
-    CardTitle,Row, Col, CardSubtitle, Button, Container
+    CardTitle,Row, Col, Container
 } from 'reactstrap';
 
 
@@ -26,15 +26,32 @@ const HouseRent = () => {
                     fakedata.map(item =>
                         <Col className="my-3" lg={4} sm={12} md={{ size: 4, order: 1 }}>
                             <Card 
-                                 style={{ border: "1px solid #b43838", borderRadius: "8px", boxShadow: "2px 4px 7px gray" }}>
+                                 style={{  borderRadius: "8px",  }}>
                                 <CardImg top width="100%" style={{ height: "260px" }} src={item.imgUrl} alt="Card image cap" />
                                 <CardBody>
-                                    <CardTitle>{item.name}</CardTitle>
+                                    <CardTitle><h5>{item.title}</h5></CardTitle>
                                     
-                                    <CardText>{item.description}</CardText>
+                                    <CardText>
+                                   <div>
+                                   <i className="fa fa-map" style={{fontSize:"15px",color:"gray"}}></i> Nasirabad H/S , Chattogram
+                                   </div>
+                                   <div className= "mt-2 d-flex justify-content-between">
+                                   <i className=" fa fa-map" style={{fontSize:"15px",color:"gray"}}>3 bedrooms</i>
+                                   <i className=" mr-3 fa fa-map" style={{fontSize:"15px",color:"gray"}}>      2 Bathrooms</i>
 
-                                    <Button outline block color="danger" className=""><a style={{ textDecoration: "none" }} href={item.live}>Live Site</a></Button>
-                                    <Button outline block color="success" className=""><a style={{ textDecoration: "none" }} href={item.github}>Repository</a></Button>
+                                   </div>
+                                      
+                                    
+                                    
+                                    </CardText>
+
+                                    
+                                    <div className= "d-flex justify-content-between">
+                    <h3>${item.price}</h3>
+
+
+                                    <button  className="text-white searchButton"><a style={{ textDecoration: "none" }} href={item.github}>View Detailes</a></button>
+                                    </div>
 
                                 </CardBody>
                             </Card>

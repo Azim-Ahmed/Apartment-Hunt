@@ -12,10 +12,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route to ="/home">
+        <Route path ="/home">
         <Home></Home>
         </Route>
-        <Route to ="/login">
+        <Route path ="/login">
         <Home></Home>
         </Route>
         <Route to ="/home">
