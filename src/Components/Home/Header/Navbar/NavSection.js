@@ -32,7 +32,7 @@ const NavSection = () => {
         <NavbarToggler onClick={toggleNavbar} className="mr-2 bg-info" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav
-            style={{ fontSize: "1.3rem" }}
+            style={{ fontSize: "1.5rem" }}
             className="ml-auto justify-content-around  align-items-center"
             navbar
           >
@@ -86,7 +86,7 @@ const NavSection = () => {
                   {" "}
                   <NavLink
                     className="mr-3 text-dark navfont navfont"
-                    to="/login"
+                    to="/login" style={{ fontSize: "1.5rem" }}
                   >
                     Login
                   </NavLink>
