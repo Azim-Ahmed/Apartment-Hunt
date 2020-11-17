@@ -141,6 +141,7 @@ const DetailsHeader = () => {
                     name="message"
                     style={{ height: "8rem" }}
                     className="input-element"
+                    
                     placeholder="Message"
                   />
                 </FormGroup>
