@@ -35,8 +35,6 @@ const DetailsHeader = () => {
 
 
 
-
-
 <Col md={4} lg={4} sm={12}>
 <div className="p-4" style={{ background: "#F4F4F4", borderRadius: "10px" }}>
                 <Form>
