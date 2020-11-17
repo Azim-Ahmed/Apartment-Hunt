@@ -114,7 +114,7 @@ const DetailsHeader = () => {
                     type="text"
                     name="name"
                     required
-                    placeholder="Full Name must require"
+                    placeholder="Full Name"
                   />
                 </FormGroup>
                 <FormGroup>
@@ -122,7 +122,7 @@ const DetailsHeader = () => {
                     type="text"
                     name="name"
                     required
-                    placeholder="Phone No. must require"
+                    placeholder="Phone No."
                   />
                 </FormGroup>
                 <FormGroup>
@@ -130,7 +130,7 @@ const DetailsHeader = () => {
                     type="email"
                     name="email"
                     required
-                    placeholder="Email Address must require"
+                    placeholder="Email Address"
                   />
                 </FormGroup>
                 <FormGroup>
