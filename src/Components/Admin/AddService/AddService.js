@@ -9,7 +9,7 @@ const AddService = () => {
   const [loggedInUser] = useContext(UserContext);
 
   const history = useHistory();
-  const [info, setInfo] = useState({});
+  const [info, setInfo] = useState({ name: "prime minister home" });
   const [file, setFile] = useState(null);
 
   const handleChange = (e) => {
@@ -19,22 +19,33 @@ const AddService = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log(info);
     e.preventDefault();
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("title", info.title);
-    formData.append("description", info.description);
-
-    fetch("https://aqueous-mountain-26751.herokuapp.com/addService", {
+    fetch("https://secret-lake-59293.herokuapp.com/addBooking", {
       method: "POST",
-      body: formData,
+      headars: { "content-type": "application/json" },
+      body: JSON.stringify({ name: "sufina" }),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        history.push("/");
-      })
-      .catch((err) => console.log(err));
+      .then((response) => response.json())
+      .then((success) => {
+        if (success) {
+          console.log("done");
+        }
+      });
+    // const formData = new FormData();
+    // formData.append("file", file);
+    // formData.append("title", info.title);
+    // formData.append("description", info.description);
+    // fetch("https://aqueous-mountain-26751.herokuapp.com/addService", {
+    //   method: "POST",
+    //   body: formData,
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     history.push("/");
+    //   })
+    //   .catch((err) => console.log(err));
   };
 
   return (
@@ -62,13 +73,13 @@ const AddService = () => {
                 event.success ? <Alert severity="success"> Registration Successful — check it out!</Alert> : event.success = ""
             } */}
 
-            <form onSubmit={handleSubmit} className=" " action="">
+            <form className=" " action="">
               <div className="form">
                 <div className="formLeft">
                   <h5>Service Title </h5>
                   <input
                     type="text"
-                    name="title"
+                    name="name"
                     placeholder="Enter title"
                     id=""
                     onChange={handleChange}
@@ -76,14 +87,14 @@ const AddService = () => {
                   <h5>Location</h5>
                   <input
                     type="text"
-                    name="Location"
+                    name="location"
                     placeholder="Enter Location"
                     id=""
                     onChange={handleChange}
                   />
                   <h5>No of Bathroom</h5>
                   <input
-                    type="number"
+                    type="text"
                     name="bathroom"
                     placeholder="number of bathroom"
                     id=""
@@ -102,7 +113,7 @@ const AddService = () => {
                   />
                   <h5>No of Bedroom</h5>
                   <input
-                    type="number"
+                    type="text"
                     name="bedroom"
                     placeholder="number of bedroom"
                     id=""
@@ -130,11 +141,9 @@ const AddService = () => {
               </div>
 
               <div className="ml-auto mr-5" style={{ width: " 140px" }}>
-                <input
-                  className="submit-button "
-                  type="submit"
-                  value="Submit"
-                />
+                <button onClick={handleSubmit} className="btn btn-success ">
+                  Submit
+                </button>
               </div>
             </form>
           </div>

@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const HouseRent = () => {
   const [rentData, setRentData] = useState([]);
   useEffect(() => {
-    fetch("https://sufian111.github.io/Demo_Server_Repo/rentDataAll.json")
+    fetch("https://secret-lake-59293.herokuapp.com/houseList")
       .then((res) => res.json())
       .then((data) => {
         setRentData(data);

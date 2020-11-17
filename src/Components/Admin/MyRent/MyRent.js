@@ -19,7 +19,7 @@ const MyRent = () => {
   const [allOrderList, setAllOrderList] = useState([]);
 
   useEffect(() => {
-    fetch("https://sufian111.github.io/Demo_Server_Repo/myRent.json")
+    fetch("https://secret-lake-59293.herokuapp.com/myRent")
       .then((res) => res.json())
       .then((data) => {
         setAllOrderList(data);
